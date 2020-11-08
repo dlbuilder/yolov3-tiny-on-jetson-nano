@@ -1,0 +1,50 @@
+{
+  "category": "PostProcessing",
+  "common": {
+    "filterName": "TensorRTTinyYolov3PostProcessingFilter",
+    "os": "Windows10, Ubuntu18.04, Jetson4.4",
+    "description": "Filter to postprocess the result from TensorRT inference engine",
+    "dependency": {
+      "Windows10": [],
+      "Ubuntu18.04": {
+        "inc": [],
+        "lib": [],
+        "export": [],
+        "install": []
+      },
+      "Jetson4.4": {
+        "inc": [],
+        "lib": [],
+        "export": [],
+        "install": []
+      }
+    },
+    "runtime": [ "DetectionClass.names" ]
+  },
+  "internalData": {
+    "className": "TensorRTTinyYolov3PostProcessingInternalData",
+    "objThreshold": "0.4",
+    "maxBoxCount": "1000"
+  },
+  "inputData": [
+    {
+      "className": "TensorRTTinyYolov3PostProcessingInputData",
+      "imageWidth": "",
+      "imageHeight": "",
+      "resizedImageWidth": "",
+      "resizedImageHeight": "",
+      "tensorRTModelOutputCount": "",
+      "tensorRTModelOutputs": "",
+      "tensorRTModelOutputsSizes": ""
+    }
+  ],
+  "outputData": {
+    "className": "TensorRTTinyYolov3PostProcessingOutputData",
+    "detections": "",
+    "imageWidth": "1920",
+    "imageHeight": "1080",
+    "resizedImageWidth": "416",
+    "resizedImageHeight": "416",
+    "detectionClassNames": ""
+  }
+}

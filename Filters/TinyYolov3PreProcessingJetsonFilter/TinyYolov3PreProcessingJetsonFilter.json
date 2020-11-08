@@ -1,0 +1,39 @@
+{
+    "category": "PreProcessing",
+    "common": {
+        "filterName": "TinyYolov3PreProcessingJetsonFilter",
+        "os": "Jetson4.4",
+        "description": "Filter to preprocess image data to feed the model",
+        "dependency": {
+            "Jetson4.4": {
+                "inc": [],
+                "lib": [
+                    "/usr/lib/aarch64-linux-gnu/libnvbuf_utils.so"
+                ],
+                "export": [],
+                "install": []
+            }
+        },
+        "runtime": []
+    },
+    "internalData": {
+        "className": "TinyYolov3PreProcessingJetsonInternalData",
+        "inferenceEngine": "0"
+    },
+    "inputData": [
+        {
+            "className": "TinyYolov3PreProcessingJetsonInputData",
+            "imageWidth": "",
+            "imageHeight": "",
+            "dmaBufferFD": ""
+        }
+    ],
+    "outputData": {
+        "className": "TinyYolov3PreProcessingJetsonOutputData",
+        "imageWidth": "1920",
+        "imageHeight": "1080",
+        "resizedImageWidth": "416",
+        "resizedImageHeight": "416",
+        "bgrData": ""
+    }
+}

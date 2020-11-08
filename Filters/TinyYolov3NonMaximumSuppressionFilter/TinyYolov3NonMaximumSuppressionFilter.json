@@ -1,0 +1,46 @@
+{
+  "category": "PostProcessing",
+  "common": {
+    "filterName": "TinyYolov3NonMaximumSuppressionFilter",
+    "os": "Windows10, Ubuntu18.04, Jetson4.4",
+    "description": "Filter to do TinyYolov3NonMaximumSuppression",
+    "dependency": {
+      "Windows10": [],
+      "Ubuntu18.04": {
+        "inc": [],
+        "lib": [],
+        "export": [],
+        "install": []
+      },
+      "Jetson4.4": {
+        "inc": [],
+        "lib": [],
+        "export": [],
+        "install": []
+      }
+    },
+    "runtime": []
+  },
+  "internalData": {
+    "className": "TinyYolov3NonMaximumSuppressionInternalData",
+    "nmsThreshold": "0.5"
+  },
+  "inputData": [
+    {
+      "className": "TinyYolov3NonMaximumSuppressionInputData",
+      "detections": "",
+      "imageWidth": "",
+      "imageHeight": "",
+      "resizedImageWidth": "",
+      "resizedImageHeight": "",
+      "detectionClassNames": ""
+    }
+  ],
+  "outputData": {
+    "className": "TinyYolov3NonMaximumSuppressionOutputData",
+    "imageWidth": "1920",
+    "imageHeight": "1080",
+    "nmsOutDetections": "",
+    "detectionClassNames": ""
+  }
+}
