@@ -23,15 +23,14 @@ int main()
     DetectionEGLRenderFilter* outputNode0= new DetectionEGLRenderFilter(outputNode0_DetectionEGLRenderInternalData,outputNode0_DetectionEGLRenderImageInputData,outputNode0_DetectionEGLRenderBoundingBoxInputData);
     while (true)
     {
-
+	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
         RunFilterSync(inputNode0);
         RunFilterSync(preProcNode0);
         RunFilterSync(inferenceNode0);
         RunFilterSync(postProcNode0);
-	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
         RunFilterSync(postProcNode1);
-	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         RunFilterSync(outputNode0);
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 	std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "[ms]" << std::endl;
     }
     return 0;
